@@ -1,13 +1,101 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.flexInit {
+  display: flex;
+  flex-wrap: wrap;
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.flexCenterRow {
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.flexAroundRow {
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+* {
+  margin: 0;
+}
+html {
+  background: rebeccapurple;
+}
+h1 {
+  color: white;
+}
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 80px;
+  width: 100%;
+  z-index: 100;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  background-color: red;
+}
+@media screen and (min-width: 600px) {
+  nav {
+    height: 50px;
+  }
+}
+nav .logo {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 80px;
+}
+nav .link-wrapper {
+  display: none;
+}
+@media screen and (min-width: 600px) {
+  nav .link-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+nav .drop-down {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 100%;
+  cursor: pointer;
+}
+@media screen and (min-width: 600px) {
+  nav .drop-down {
+    display: none;
+  }
+}
+nav .side-bar {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  position: fixed;
+  top: 80px;
+  height: 500%;
+  transition: 0.5s;
+  width: 100%;
+  background-color: #8d2c2c;
+}
+nav .side-bar a {
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+}
+@media screen and (min-width: 600px) {
+  nav .side-bar {
+    display: none;
+  }
 }
